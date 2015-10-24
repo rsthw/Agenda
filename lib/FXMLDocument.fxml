@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="todo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <MenuButton fx:id="tipo_mb" mnemonicParsing="false" text="Tipo">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#tipo_tarea" text="Tarea" />
+                      <MenuItem mnemonicParsing="false" onAction="#tipo_proyecto" text="Proyecto" />
+                    </items>
+                  </MenuButton>
+                  <MenuButton fx:id="prioridad_mb" mnemonicParsing="false" text="Prioridad">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#muy_alta" text="MUY ALTA" />
+                      <MenuItem mnemonicParsing="false" onAction="#alta" text="ALTA" />
+                        <MenuItem mnemonicParsing="false" onAction="#media" text="MEDIA" />
+                    </items>
+                  </MenuButton>
+                  <TextField fx:id="nombre_tf" disable="true" promptText="Nombre" />
+                  <TextField fx:id="materia_tf" disable="true" promptText="Materia" />
+                  <TextField fx:id="fecha_tf" disable="true" promptText="Fecha (dd/mm/aaaa)" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TextArea fx:id="descripcion_ta" disable="true" prefHeight="45.0" prefWidth="618.0" promptText="Descripción">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="617.0" spacing="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#nuevo" text="Nuevo Pendiente">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="FILTROS:" textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#todoClicked" text="Todo" />
+                  <Button mnemonicParsing="false" onAction="#tareasClicked" text="Tarea" />
+                  <Button mnemonicParsing="false" onAction="#proyectosClicked" text="Proyecto" />
+                  <Button mnemonicParsing="false" onAction="#clear" text="Clear" />
+                  <Button mnemonicParsing="false" onAction="#popUpInfo" text="Ayuda" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox fx:id="zona" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="label" text="Estado">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

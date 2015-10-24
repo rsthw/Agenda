@@ -1,6 +1,42 @@
 #Agenda
-Proyecto 2, una agenda personalizada usando sqlite.
+
+Una agenda personalizada usando sqlite, jdbc, javafx y junit para pruebas unitarias.
+
+################################## REQUERIMIENTOS #######################################################################
+
+Requerimientos:
+En Linux es solo tener instalado esto
+sqlite (http://www.sqlite.org/download.html)
+java SE (incluye compilador, javafx y java.sql, junit)
+
+################################# EJECUTAR EL PROGRAMA ##################################################################
 
 Como usar el programa:
-1) entrar a la terminal
-2) 
+- entrar a la terminal
+
+- localizarse en la carpeta Agenda con "cd", al terminar debe parecerse a:
+.../Agenda$
+
+- ejecutar
+.../Agenda$ java -cp ".:./lib:./lib/*:./bin:./src" Agenda
+
+###################################### PRUEBAS UNITARIAS ################################################################
+
+Sobre las pruebas unitarias:
+- No se le hizo pruebas unitarias a lo que maneja a la base de datos (solo se hizo para Row).
+
+Como ejecutar las pruebas unitarias:
+- entrar a la terminal
+
+- localizarse en la carpeta Agenda con "cd", al terminar debe parecerse a:
+.../Agenda$
+
+- ejecutar
+.../Agenda$ java -cp ".:./lib:./lib/*:./bin:./src:/usr/share/java/junit4.jar:./test" TestRunner
+
+
+######################################### NOTAS ############################################################################
+
+Notas:
+Esta listo para ejecutarse.
+Las instrucciones para como utilizarse estan en el boton "Ayuda" del programa.
